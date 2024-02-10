@@ -1,6 +1,10 @@
 <div class="grid-container" *ngIf="pokemons.length > 0">
   <div class="grid-item" *ngFor="let pokemon of pokemons">
-    <div class="pokemon-container" (click)="goToDetail(pokemon.id)">
+    <div
+      class="pokemon-container"
+      appHighlight
+      (click)="goToDetail(pokemon.id)"
+    >
       <h2>{{ pokemon.name }}</h2>
       <img [src]="getImageUrl(pokemon.id)" alt="{{ pokemon.name }}" />
       <p>Pokemon types:</p>

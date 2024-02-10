@@ -11,6 +11,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { PokemonUpdateComponent } from './components/pokemon-update/pokemon-update.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { TypeFormatterPipe } from './pipes/type-formatter.pipe';
+import { HighlightDirective } from './directives/highlight.directive';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { TypeFormatterPipe } from './pipes/type-formatter.pipe';
     PokemonTypeComponent,
     PageNotFoundComponent,
     PokemonUpdateComponent,
-    TypeFormatterPipe
+    TypeFormatterPipe,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
