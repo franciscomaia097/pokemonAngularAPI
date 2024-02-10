@@ -7,7 +7,7 @@
       <div class="types">
         <app-pokemon-type
           *ngFor="let type of pokemon.types"
-          [type]="type"
+          [type]="type | typeFormatter"
         ></app-pokemon-type>
       </div>
     </div>

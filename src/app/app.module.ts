@@ -10,6 +10,7 @@ import { PokemonTypeComponent } from './components/pokemon-type/pokemon-type.com
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { PokemonUpdateComponent } from './components/pokemon-update/pokemon-update.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { TypeFormatterPipe } from './pipes/type-formatter.pipe';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     PokemonDetailComponent,
     PokemonTypeComponent,
     PageNotFoundComponent,
-    PokemonUpdateComponent
+    PokemonUpdateComponent,
+    TypeFormatterPipe
   ],
   imports: [
     BrowserModule,
