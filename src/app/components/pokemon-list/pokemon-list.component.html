@@ -5,11 +5,16 @@
       <img [src]="getImageUrl(pokemon.id)" alt="{{ pokemon.name }}" />
       <p>Height: {{ pokemon.height }}</p>
       <p>Weight: {{ pokemon.weight }}</p>
-      <p>Types: {{ pokemon.types.join(", ") }}</p>
-      <p>Family: {{ pokemon.family }}</p>
+      <p>Pokemon types:</p>
+      <div class="types">
+        <app-pokemon-type
+          *ngFor="let type of pokemon.types"
+          [type]="type"
+        ></app-pokemon-type>
+      </div>
     </div>
   </div>
 </div>
-<button (click)="loadMore()" *ngIf="pokemons.length % 12 === 0">
-  Load More
-</button>
+<div class="load-more-container">
+  <button (click)="loadMore()">Load More</button>
+</div>
