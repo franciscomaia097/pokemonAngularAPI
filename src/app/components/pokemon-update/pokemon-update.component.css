@@ -1,0 +1,32 @@
+.form-container {
+  width: 300px;
+  margin: auto;
+}
+
+.pokemon-image {
+  width: 100%;
+  height: auto;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.submit-button,
+.back-button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  box-sizing: border-box;
+}
+
+.back-button {
+  background-color: #f8f9fa;
+  border: 1px solid #ced4da;
+}

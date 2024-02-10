@@ -14,7 +14,7 @@
 
 .card {
   max-width: 600px; /* Adjust as needed */
-  padding: 20px;
+  padding: 55px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25); /* Gives the card a shadow */
   border-radius: 10px; /* Rounds the corners of the card */
   text-align: center; /* Centers the text inside the card */

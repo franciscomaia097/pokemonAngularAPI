@@ -3,8 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { PokemonDetailComponent } from './components/pokemon-detail/pokemon-detail.component';
 import { PokemonListComponent } from './components/pokemon-list/pokemon-list.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { PokemonUpdateComponent } from './components/pokemon-update/pokemon-update.component';
 
 const routes: Routes = [
+  { path: 'pokemon/:id/update', component: PokemonUpdateComponent },
   { path: '', redirectTo: '/pokemon', pathMatch: 'full' },
   { path: 'pokemon/:id', component: PokemonDetailComponent },
   { path: 'pokemon', component: PokemonListComponent },

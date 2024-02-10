@@ -8,6 +8,9 @@ import { PokemonDetailComponent } from './components/pokemon-detail/pokemon-deta
 import { HttpClientModule } from '@angular/common/http';
 import { PokemonTypeComponent } from './components/pokemon-type/pokemon-type.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { PokemonUpdateComponent } from './components/pokemon-update/pokemon-update.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -15,12 +18,14 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     PokemonListComponent,
     PokemonDetailComponent,
     PokemonTypeComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    PokemonUpdateComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
