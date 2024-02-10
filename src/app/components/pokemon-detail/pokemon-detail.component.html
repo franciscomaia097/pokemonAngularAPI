@@ -3,14 +3,19 @@
   <div class="card" *ngIf="pokemon">
     <h2>{{ pokemon.name }}</h2>
     <img [src]="getImageUrl(pokemon.id)" alt="{{ pokemon.name }}" />
-    <p>Pokemon types</p>
+    <p>Types</p>
     <div class="types">
       <app-pokemon-type
         *ngFor="let type of pokemon.types"
         [type]="type"
       ></app-pokemon-type>
     </div>
+    <p>Height: {{ pokemon.height }}</p>
+    <p>Weight: {{ pokemon.weight }}</p>
+    <div class="button-group">
+      <button (click)="updatePokemon(pokemon.id)">Update</button>
+      <button (click)="deletePokemon(pokemon.id)">Delete</button>
+    </div>
     <button (click)="goBack()">Back</button>
-    <button (click)="deletePokemon(pokemon.id)">Delete</button>
   </div>
 </div>
