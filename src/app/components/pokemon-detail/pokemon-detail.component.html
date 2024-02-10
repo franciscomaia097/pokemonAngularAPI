@@ -1,1 +1,16 @@
-<p>pokemon-detail works!</p>
+<div class="container">
+  <h1 class="title">Pokemon Details</h1>
+  <div class="card" *ngIf="pokemon">
+    <h2>{{ pokemon.name }}</h2>
+    <img [src]="getImageUrl(pokemon.id)" alt="{{ pokemon.name }}" />
+    <p>Pokemon types</p>
+    <div class="types">
+      <app-pokemon-type
+        *ngFor="let type of pokemon.types"
+        [type]="type"
+      ></app-pokemon-type>
+    </div>
+    <button (click)="goBack()">Back</button>
+    <button (click)="deletePokemon(pokemon.id)">Delete</button>
+  </div>
+</div>

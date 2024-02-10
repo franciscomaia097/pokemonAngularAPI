@@ -1,0 +1,49 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0; /* Adjust as needed */
+}
+
+.title {
+  margin-bottom: 20px; /* Adjust as needed */
+}
+
+.card {
+  max-width: 600px; /* Adjust as needed */
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25); /* Gives the card a shadow */
+  border-radius: 10px; /* Rounds the corners of the card */
+  text-align: center; /* Centers the text inside the card */
+}
+
+.types {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centers the types horizontally */
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:first-of-type {
+  margin-right: 10px;
+}
+
+button:last-of-type {
+  margin-left: 10px;
+}
