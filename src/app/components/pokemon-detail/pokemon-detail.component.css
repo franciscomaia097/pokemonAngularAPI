@@ -5,25 +5,25 @@
   align-items: center;
   min-height: 100vh;
   margin: 0;
-  background-color: #f0f0f0; /* Adjust as needed */
+  background-color: #f0f0f0; 
 }
 
 .title {
-  margin-bottom: 20px; /* Adjust as needed */
+  margin-bottom: 20px; 
 }
 
 .card {
-  max-width: 600px; /* Adjust as needed */
+  max-width: 600px;
   padding: 55px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25); /* Gives the card a shadow */
-  border-radius: 10px; /* Rounds the corners of the card */
-  text-align: center; /* Centers the text inside the card */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25); 
+  border-radius: 10px; 
+  text-align: center;
 }
 
 .types {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Centers the types horizontally */
+  justify-content: center; 
 }
 
 button {

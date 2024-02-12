@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { PokemonApiService } from '../../services/pokemonApi/pokemon-api.service';
 import { Router } from '@angular/router';
 import { PokemonStateService } from '../../services/pokemonState/pokemon-state.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-pokemon-list',
@@ -17,7 +18,8 @@ export class PokemonListComponent implements OnInit {
   constructor(
     private pokemonApiService: PokemonApiService,
     private router: Router,
-    private pokemonStateService: PokemonStateService
+    private pokemonStateService: PokemonStateService,
+    private http: HttpClient
   ) {}
 
   ngOnInit(): void {
@@ -37,6 +39,12 @@ export class PokemonListComponent implements OnInit {
           window.scrollTo(0, position);
         }, 0);
       }
+    );
+
+    // Test the error handling interceptor
+    this.http.get('https://nonexistent-api.com').subscribe(
+      (data) => console.log(data),
+      (error) => console.error(error)
     );
   }
 

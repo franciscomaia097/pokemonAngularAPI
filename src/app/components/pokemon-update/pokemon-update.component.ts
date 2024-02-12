@@ -12,8 +12,7 @@ import { Location } from '@angular/common';
 export class PokemonUpdateComponent implements OnInit {
   pokemon: any;
 
-  updateForm!: FormGroup; // Declare updateForm without initializing it
-
+  updateForm!: FormGroup; 
   constructor(
     private route: ActivatedRoute,
     private pokemonService: PokemonApiService,
@@ -23,8 +22,8 @@ export class PokemonUpdateComponent implements OnInit {
   ngOnInit(): void {
     const id = Number(this.route.snapshot.paramMap.get('id')) || 0;
     this.pokemonService.getPokemon(id).subscribe((pokemon) => {
-      this.pokemon = pokemon; // Update the pokemon object
-      this.pokemon.image = this.pokemonService.getImageUrl(id); // Get the image URL
+      this.pokemon = pokemon; 
+      this.pokemon.image = this.pokemonService.getImageUrl(id);
       this.updateForm = new FormGroup({
         name: new FormControl(pokemon.name),
         height: new FormControl(pokemon.height),
