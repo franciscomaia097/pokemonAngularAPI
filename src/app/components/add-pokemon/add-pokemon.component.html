@@ -1,13 +1,51 @@
 <div class="add-pokemon">
-    <form (ngSubmit)="onSubmit()">
-      <label for="pokemonName">Pokemon Name:</label>
-      <input
-        type="text"
-        id="pokemonName"
-        [(ngModel)]="pokemonName"
-        name="pokemonName"
-        required
-      />
-      <button type="submit">Add Pokemon</button>
-    </form>
-  </div>
+  <form (ngSubmit)="onSubmit()">
+    <label for="pokemonName">Pokemon Name:</label>
+    <input
+      type="text"
+      id="pokemonName"
+      [(ngModel)]="pokemonName"
+      name="pokemonName"
+      required
+    />
+
+    <label for="pokemonWeight">Pokemon Weight:</label>
+    <input
+      type="number"
+      id="pokemonWeight"
+      [(ngModel)]="pokemonWeight"
+      name="pokemonWeight"
+      required
+    />
+
+    <label for="pokemonHeight">Pokemon Height:</label>
+    <input
+      type="number"
+      id="pokemonHeight"
+      [(ngModel)]="pokemonHeight"
+      name="pokemonHeight"
+      required
+    />
+
+    <label for="pokemonType">Pokemon Type:</label>
+    <input
+      type="text"
+      id="pokemonType"
+      [(ngModel)]="pokemonType"
+      name="pokemonType"
+      required
+    />
+
+    <label for="pokemonImageUrl">Pokemon Image URL:</label>
+    <input
+      type="text"
+      id="pokemonImageUrl"
+      [(ngModel)]="pokemonImageUrl"
+      name="pokemonImageUrl"
+      required
+    />
+
+    <button type="submit">Add Pokemon</button>
+    <button type="button" (click)="onBackClick()">Back</button>
+  </form>
+</div>
