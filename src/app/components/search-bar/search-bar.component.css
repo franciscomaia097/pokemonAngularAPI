@@ -1,0 +1,22 @@
+.search-bar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+input {
+  width: 50%; /* adjust as needed */
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  transition: 0.3s;
+}
+
+input:focus {
+  border-color: dodgerblue;
+  outline: none;
+}

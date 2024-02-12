@@ -68,4 +68,14 @@ export class PokemonListComponent implements OnInit {
     this.pokemonStateService.changeScrollPositionState(window.pageYOffset);
     this.router.navigate(['/pokemon', id]);
   }
+
+  onSearch(searchTerm: string): void {
+    if (searchTerm) {
+      this.pokemons = this.allPokemons.filter((pokemon) =>
+        pokemon.name.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+    } else {
+      this.pokemons = this.allPokemons.slice(0, this.offset);
+    }
+  }
 }

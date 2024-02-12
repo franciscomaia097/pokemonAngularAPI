@@ -1,3 +1,4 @@
+<app-search-bar (search)="onSearch($event)"></app-search-bar>
 <div class="grid-container" *ngIf="pokemons.length > 0">
   <div class="grid-item" *ngFor="let pokemon of pokemons">
     <div

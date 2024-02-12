@@ -1,0 +1,7 @@
+<div class="search-bar">
+  <input
+    [(ngModel)]="searchTerm"
+    (keyup)="search.emit(searchTerm)"
+    placeholder="Search Pokemon"
+  />
+</div>
