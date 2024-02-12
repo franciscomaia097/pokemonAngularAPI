@@ -7,6 +7,7 @@ import { PokemonUpdateComponent } from './components/pokemon-update/pokemon-upda
 import { ExtraOptions } from '@angular/router';
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { AddPokemonComponent } from './components/add-pokemon/add-pokemon.component';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   { path: '', redirectTo: '/pokemon', pathMatch: 'full' },
@@ -14,7 +15,12 @@ const routes: Routes = [
   { path: 'pokemon/:id/update', component: PokemonUpdateComponent },
   { path: 'pokemon/:id', component: PokemonDetailComponent },
   { path: 'login', component: LoginFormComponent },
-  { path: 'add-pokemon', component: AddPokemonComponent },
+  {
+    path: 'add-pokemon',
+    component: AddPokemonComponent,
+    canActivate: [AuthGuard],
+  },
+
   { path: '**', component: PageNotFoundComponent },
 ];
 
