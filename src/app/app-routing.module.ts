@@ -5,12 +5,15 @@ import { PokemonListComponent } from './components/pokemon-list/pokemon-list.com
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { PokemonUpdateComponent } from './components/pokemon-update/pokemon-update.component';
 import { ExtraOptions } from '@angular/router';
+import { LoginFormComponent } from './components/login-form/login-form.component';
+
 
 const routes: Routes = [
-  { path: 'pokemon/:id/update', component: PokemonUpdateComponent },
   { path: '', redirectTo: '/pokemon', pathMatch: 'full' },
-  { path: 'pokemon/:id', component: PokemonDetailComponent },
   { path: 'pokemon', component: PokemonListComponent },
+  { path: 'pokemon/:id/update', component: PokemonUpdateComponent },
+  { path: 'pokemon/:id', component: PokemonDetailComponent },
+  { path: 'login', component: LoginFormComponent },
   { path: '**', component: PageNotFoundComponent },
 ];
 

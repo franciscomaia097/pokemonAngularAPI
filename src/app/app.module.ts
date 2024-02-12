@@ -14,6 +14,7 @@ import { TypeFormatterPipe } from './pipes/type-formatter.pipe';
 import { HighlightDirective } from './directives/highlight.directive';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { FormsModule } from '@angular/forms';
+import { LoginFormComponent } from './components/login-form/login-form.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { FormsModule } from '@angular/forms';
     TypeFormatterPipe,
     HighlightDirective,
     SearchBarComponent,
+    LoginFormComponent,
   ],
   imports: [
     BrowserModule,

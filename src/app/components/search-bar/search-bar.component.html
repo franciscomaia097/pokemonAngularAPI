@@ -4,4 +4,7 @@
     (keyup)="search.emit(searchTerm)"
     placeholder="Search Pokemon"
   />
+  <button (click)="onLoginClick()" *ngIf="!isLoggedIn">Login</button>
+  <button (click)="onAddPokemonClick()" *ngIf="isLoggedIn">Add Pokemon</button>
+  <app-login-form *ngIf="showLoginForm"></app-login-form>
 </div>
