@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { PokemonApiService } from '../../services/pokemon-api.service';
 import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-pokemon-detail',
@@ -14,7 +15,8 @@ export class PokemonDetailComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     public pokemonService: PokemonApiService,
-    private router: Router
+    private router: Router,
+    private authService: AuthService
   ) {}
 
   ngOnInit(): void {
@@ -42,5 +44,9 @@ export class PokemonDetailComponent implements OnInit {
 
   updatePokemon(id: number) {
     this.router.navigate(['/pokemon', id, 'update']);
+  }
+
+  get isLoggedIn(): boolean {
+    return this.authService.isLoggedIn;
   }
 }

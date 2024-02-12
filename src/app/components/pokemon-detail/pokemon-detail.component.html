@@ -12,7 +12,7 @@
     </div>
     <p>Height: {{ pokemon.height }}</p>
     <p>Weight: {{ pokemon.weight }}</p>
-    <div class="button-group">
+    <div class="button-group" *ngIf="isLoggedIn">
       <button (click)="updatePokemon(pokemon.id)">Update</button>
       <button (click)="deletePokemon(pokemon.id)">Delete</button>
     </div>

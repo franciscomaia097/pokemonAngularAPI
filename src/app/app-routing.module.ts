@@ -12,7 +12,11 @@ import { AuthGuard } from './guards/auth.guard';
 const routes: Routes = [
   { path: '', redirectTo: '/pokemon', pathMatch: 'full' },
   { path: 'pokemon', component: PokemonListComponent },
-  { path: 'pokemon/:id/update', component: PokemonUpdateComponent },
+  {
+    path: 'pokemon/:id/update',
+    component: PokemonUpdateComponent,
+    canActivate: [AuthGuard],
+  },
   { path: 'pokemon/:id', component: PokemonDetailComponent },
   { path: 'login', component: LoginFormComponent },
   {
