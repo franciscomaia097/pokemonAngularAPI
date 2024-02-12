@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PokemonApiService } from '../../services/pokemon-api.service';
 import { Router } from '@angular/router';
+import { PokemonStateService } from '../../services/pokemon-state.service';
 
 @Component({
   selector: 'app-pokemon-list',
@@ -15,17 +16,36 @@ export class PokemonListComponent implements OnInit {
 
   constructor(
     private pokemonApiService: PokemonApiService,
-    private router: Router
+    private router: Router,
+    private pokemonStateService: PokemonStateService
   ) {}
 
   ngOnInit(): void {
+    this.pokemonStateService.currentPokemonState.subscribe((pokemons) => {
+      this.pokemons = pokemons;
+    });
+
+    this.pokemonStateService.currentOffsetState.subscribe((offset) => {
+      this.offset = offset;
+    });
+
     this.loadAllPokemons();
+
+    this.pokemonStateService.currentScrollPositionState.subscribe(
+      (position) => {
+        setTimeout(() => {
+          window.scrollTo(0, position);
+        }, 0);
+      }
+    );
   }
 
   loadAllPokemons(): void {
     this.pokemonApiService.getPokemons().subscribe((data) => {
       this.allPokemons = data;
-      this.loadMore();
+      if (this.pokemons.length === 0) {
+        this.loadMore();
+      }
     });
   }
 
@@ -36,6 +56,8 @@ export class PokemonListComponent implements OnInit {
     );
     this.pokemons = [...this.pokemons, ...nextPokemons];
     this.offset += this.limit;
+    this.pokemonStateService.changePokemonState(this.pokemons);
+    this.pokemonStateService.changeOffsetState(this.offset);
   }
 
   getImageUrl(id: number): string {
@@ -43,6 +65,7 @@ export class PokemonListComponent implements OnInit {
   }
 
   goToDetail(id: number) {
+    this.pokemonStateService.changeScrollPositionState(window.pageYOffset);
     this.router.navigate(['/pokemon', id]);
   }
 }

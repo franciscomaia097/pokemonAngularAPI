@@ -4,6 +4,7 @@ import { PokemonDetailComponent } from './components/pokemon-detail/pokemon-deta
 import { PokemonListComponent } from './components/pokemon-list/pokemon-list.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { PokemonUpdateComponent } from './components/pokemon-update/pokemon-update.component';
+import { ExtraOptions } from '@angular/router';
 
 const routes: Routes = [
   { path: 'pokemon/:id/update', component: PokemonUpdateComponent },
@@ -13,8 +14,14 @@ const routes: Routes = [
   { path: '**', component: PageNotFoundComponent },
 ];
 
+const routerOptions: ExtraOptions = {
+  scrollPositionRestoration: 'enabled',
+  anchorScrolling: 'enabled',
+  scrollOffset: [0, 64], // [x, y]
+};
+
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, routerOptions)],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

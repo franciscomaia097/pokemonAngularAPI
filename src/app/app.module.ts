@@ -12,7 +12,7 @@ import { PokemonUpdateComponent } from './components/pokemon-update/pokemon-upda
 import { ReactiveFormsModule } from '@angular/forms';
 import { TypeFormatterPipe } from './pipes/type-formatter.pipe';
 import { HighlightDirective } from './directives/highlight.directive';
-
+import { RouteReuseStrategy } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -23,15 +23,15 @@ import { HighlightDirective } from './directives/highlight.directive';
     PageNotFoundComponent,
     PokemonUpdateComponent,
     TypeFormatterPipe,
-    HighlightDirective
+    HighlightDirective,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
