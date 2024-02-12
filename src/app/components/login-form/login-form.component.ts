@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-login-form',
@@ -9,13 +10,18 @@ import { Router } from '@angular/router';
 export class LoginFormComponent {
   username: string = '';
   password: string = '';
-  constructor(private router: Router) {}
+  constructor(private router: Router, private authService: AuthService) {}
 
   onBackClick(): void {
     this.router.navigate(['/']);
   }
 
   onSubmit(): void {
-    // perform login logic here
+    if (this.authService.login(this.username, this.password)) {
+      alert('Login successful');
+      this.router.navigate(['/']);
+    } else {
+      alert('Invalid username or password');
+    }
   }
 }
