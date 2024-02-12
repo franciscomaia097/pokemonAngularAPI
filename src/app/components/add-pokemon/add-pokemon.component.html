@@ -1,0 +1,13 @@
+<div class="add-pokemon">
+    <form (ngSubmit)="onSubmit()">
+      <label for="pokemonName">Pokemon Name:</label>
+      <input
+        type="text"
+        id="pokemonName"
+        [(ngModel)]="pokemonName"
+        name="pokemonName"
+        required
+      />
+      <button type="submit">Add Pokemon</button>
+    </form>
+  </div>

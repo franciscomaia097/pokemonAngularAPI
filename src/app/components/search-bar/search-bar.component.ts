@@ -1,5 +1,6 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-search-bar',
@@ -9,18 +10,21 @@ import { Router } from '@angular/router';
 export class SearchBarComponent {
   searchTerm: string = '';
   showLoginForm: boolean = false;
-  isLoggedIn: boolean = false;
 
   @Output() search = new EventEmitter<string>();
   @Output() addPokemon = new EventEmitter<void>();
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private authService: AuthService) {}
 
   onLoginClick(): void {
     this.router.navigate(['/login']);
   }
 
+  get isLoggedIn(): boolean {
+    return this.authService.isLoggedIn;
+  }
+
   onAddPokemonClick(): void {
-    this.addPokemon.emit();
+    this.router.navigate(['/add-pokemon']);
   }
 }

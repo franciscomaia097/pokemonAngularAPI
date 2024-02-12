@@ -6,7 +6,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { PokemonUpdateComponent } from './components/pokemon-update/pokemon-update.component';
 import { ExtraOptions } from '@angular/router';
 import { LoginFormComponent } from './components/login-form/login-form.component';
-
+import { AddPokemonComponent } from './components/add-pokemon/add-pokemon.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/pokemon', pathMatch: 'full' },
@@ -14,6 +14,7 @@ const routes: Routes = [
   { path: 'pokemon/:id/update', component: PokemonUpdateComponent },
   { path: 'pokemon/:id', component: PokemonDetailComponent },
   { path: 'login', component: LoginFormComponent },
+  { path: 'add-pokemon', component: AddPokemonComponent },
   { path: '**', component: PageNotFoundComponent },
 ];
 
