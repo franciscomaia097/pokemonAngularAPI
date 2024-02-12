@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
-import { PokemonApiService } from 'src/app/services/pokemon-api.service';
+import { PokemonApiService } from 'src/app/services/pokemonApi/pokemon-api.service';
 import { Location } from '@angular/common';
 
 @Component({
