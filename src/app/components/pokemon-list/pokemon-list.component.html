@@ -1,23 +1,25 @@
-<app-search-bar (search)="onSearch($event)"></app-search-bar>
-<div class="grid-container" *ngIf="pokemons.length > 0">
-  <div class="grid-item" *ngFor="let pokemon of pokemons">
-    <div
-      class="pokemon-container"
-      appHighlight
-      (click)="goToDetail(pokemon.id)"
-    >
-      <h2>{{ pokemon.name }}</h2>
-      <img [src]="getImageUrl(pokemon.id)" alt="{{ pokemon.name }}" />
-      <p>Pokemon types:</p>
-      <div class="types">
-        <app-pokemon-type
-          *ngFor="let type of pokemon.types"
-          [type]="type | typeFormatter"
-        ></app-pokemon-type>
+<div class="main-container">
+  <app-search-bar (search)="onSearch($event)"></app-search-bar>
+  <div class="grid-container" *ngIf="pokemons.length > 0">
+    <div class="grid-item" *ngFor="let pokemon of pokemons">
+      <div
+        class="pokemon-container"
+        appHighlight
+        (click)="goToDetail(pokemon.id)"
+      >
+        <h2>{{ pokemon.name }}</h2>
+        <img [src]="getImageUrl(pokemon.id)" alt="{{ pokemon.name }}" />
+        <p>Pokemon types:</p>
+        <div class="types">
+          <app-pokemon-type
+            *ngFor="let type of pokemon.types"
+            [type]="type | typeFormatter"
+          ></app-pokemon-type>
+        </div>
       </div>
     </div>
   </div>
-</div>
-<div class="load-more-container">
-  <button (click)="loadMore()">Load More</button>
+  <div class="load-more-container">
+    <button (click)="loadMore()">Load More</button>
+  </div>
 </div>
