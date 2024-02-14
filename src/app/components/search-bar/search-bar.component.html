@@ -6,5 +6,6 @@
   />
   <button (click)="onLoginClick()" *ngIf="!isLoggedIn">Login</button>
   <button (click)="onAddPokemonClick()" *ngIf="isLoggedIn">Add Pokemon</button>
+  <button (click)="onMyPokemonsClick()" *ngIf="isLoggedIn">My Pokemons</button>
   <app-login-form *ngIf="showLoginForm"></app-login-form>
 </div>

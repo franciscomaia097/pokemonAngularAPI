@@ -27,4 +27,8 @@ export class SearchBarComponent {
   onAddPokemonClick(): void {
     this.router.navigate(['/add-pokemon']);
   }
+
+  onMyPokemonsClick(): void {
+    this.router.navigate(['/my-pokemons']);
+  }
 }

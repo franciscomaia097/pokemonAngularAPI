@@ -18,6 +18,7 @@ import { LoginFormComponent } from './components/login-form/login-form.component
 import { AddPokemonComponent } from './components/add-pokemon/add-pokemon.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ErrorInterceptor } from './interceptors/error.interceptor';
+import { MyPokemonsComponent } from './components/my-pokemons/my-pokemons.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { ErrorInterceptor } from './interceptors/error.interceptor';
     SearchBarComponent,
     LoginFormComponent,
     AddPokemonComponent,
+    MyPokemonsComponent,
   ],
   imports: [
     BrowserModule,
