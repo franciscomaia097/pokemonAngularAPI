@@ -1,27 +1,38 @@
-# PokemonAngularAPI
+# Pokemon Manager
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.11.
+This project is a part of the UpSkill formation. It's an Angular application that allows you to manage your Pokemon collection. The application consumes data from an API and displays Pokemon images.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- View a list of Pokemons
+- Add a new Pokemon
+- Delete a Pokemon
+- Update a Pokemon's details
 
-## Code scaffolding
+## API
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+The application consumes data from the following API:
+https://softwium.com/api/pokemons
 
-## Build
+Pokemon images are fetched from:
+https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{id}.png
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Replace `{id}` with the ID of the Pokemon.
 
-## Running unit tests
+## Setup
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Clone the repository
+2. Install dependencies with `npm install`
+3. Start the server with `ng serve`
+4. Navigate to `http://localhost:4200/`
 
-## Running end-to-end tests
+## Testing CRUD Operations
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+To test CRUD operations, use the following credentials:
 
-## Further help
+- Username: admin
+- Password: password
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
