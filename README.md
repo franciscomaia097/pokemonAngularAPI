@@ -11,11 +11,9 @@ This project is a part of the UpSkill formation. It's an Angular application tha
 
 ## API
 
-The application consumes data from the following API:
-https://softwium.com/api/pokemons
+The application consumes data from the following API: https://softwium.com/api/pokemons
 
-Pokemon images are fetched from:
-https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{id}.png
+Pokemon images are fetched from: https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{id}.png
 
 Replace `{id}` with the ID of the Pokemon.
 
